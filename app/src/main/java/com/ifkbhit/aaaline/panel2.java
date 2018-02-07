@@ -58,7 +58,7 @@ public class panel2 extends Panel {
 
         for (int i = 0; i < 11; ++i) {
             nums[i] = new Texture(Bitmap.createScaledBitmap(numBitmaps[i], (int) w, (int) h, false));
-            nums[i].setPos(new Point(0, panel.pos.y + 245 * scale));
+            nums[i].setPos(new Point(0, panel.pos.y + 240 * scale));
             numBitmaps[i] = null;
         }
 
@@ -73,7 +73,7 @@ public class panel2 extends Panel {
 
         for (int i = 0; i < 3; ++i) {
             indTextures[i] = new Texture(Bitmap.createScaledBitmap(indBitmaps[i], (int) w, (int) h, false));
-            indTextures[i].setPos(new Point(panel.pos.x + 514 * scale, panel.pos.y + (90 + 39 * i) * scale));
+            indTextures[i].setPos(new Point(panel.pos.x + 516 * scale, panel.pos.y + (168 - 40 * i) * scale));
             indBitmaps[i] = null;
         }
 
@@ -105,7 +105,7 @@ public class panel2 extends Panel {
         for (int i = 0; i < 4; ++i) {
             for (int j = 0; j < 4; ++j) {
                 backTextures[i][j] = new Texture(Bitmap.createScaledBitmap(backBitmaps[i][j], (int) w, (int) h, false));
-                backTextures[i][j].setPos(new Point(panel.pos.x + 336 * scale, panel.pos.y + 195 * scale));
+                backTextures[i][j].setPos(new Point(panel.pos.x + 346 * scale, panel.pos.y + 169 * scale));
                 backBitmaps[i][j] = null;
             }
         }
@@ -132,7 +132,7 @@ public class panel2 extends Panel {
         for (int i = 0; i < 4; ++i) {
             for (int j = 0; j < 3; ++j) {
                 frontTextures[i][j] = new Texture(Bitmap.createScaledBitmap(backBitmaps[i][j], (int) w, (int) h, false));
-                frontTextures[i][j].setPos(new Point(panel.pos.x + 119 * scale, panel.pos.y + 97 * scale));
+                frontTextures[i][j].setPos(new Point(panel.pos.x + 116 * scale, panel.pos.y + 76 * scale));
                 backBitmaps[i][j] = null;
             }
         }
@@ -170,10 +170,10 @@ public class panel2 extends Panel {
             cur_r = 10;
         }
 
-        nums[cur_l].pos.x = panel.pos.x + 110 * scale;
+        nums[cur_l].pos.x = panel.pos.x + 130 * scale;
         nums[cur_l].xPos = panel.xPos;
         nums[cur_l].draw(canvas);
-        nums[cur_r].pos.x = panel.pos.x + 195 * scale;
+        nums[cur_r].pos.x = panel.pos.x + 213 * scale;
         nums[cur_r].xPos = panel.xPos;
         nums[cur_r].draw(canvas);
     }

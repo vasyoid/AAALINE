@@ -6,7 +6,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:paddingTop="?attr/actionBarSize"
-    tools:context="com.ifkbhit.parktronic.InfoActivity">
+    tools:context="com.ifkbhit.aaaline.InfoActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
