@@ -70,29 +70,29 @@ public class panel1 extends Panel {
 
         k = panel.img.getHeight() / 174.0;
 
-        Point position = new Point(84 * k, 68 * k).sum(panel.pos);
-        texPanels[0][0] = new Texture(getScaledBitmap(R.drawable.left_small_0, 71 * k,(70 * k)), position, k);
-        texPanels[0][1] = new Texture(getScaledBitmap(R.drawable.left_small_1, 71 * k,(70 * k)), position, k);
-        texPanels[0][2] = new Texture(getScaledBitmap(R.drawable.left_small_2, 71 * k,(70 * k)), position, k);
-        texPanels[0][3] = new Texture(getScaledBitmap(R.drawable.left_small_3, 71 * k, (70 * k)),position, k);
+        Point position = new Point(59 * k, 67 * k).sum(panel.pos);
+        texPanels[0][0] = new Texture(getScaledBitmap(R.drawable.left_small_0, 78 * k,(75 * k)), position, k);
+        texPanels[0][1] = new Texture(getScaledBitmap(R.drawable.left_small_1, 78 * k,(75 * k)), position, k);
+        texPanels[0][2] = new Texture(getScaledBitmap(R.drawable.left_small_2, 78 * k,(75 * k)), position, k);
+        texPanels[0][3] = new Texture(getScaledBitmap(R.drawable.left_small_3, 78 * k, (75 * k)),position, k);
 
-        position = new Point(157 * k, 50 * k).sum(panel.pos);
-        texPanels[1][0] = new Texture(getScaledBitmap(R.drawable.left_big_0, 72 * k,(88 * k)),position , k);
-        texPanels[1][1] = new Texture(getScaledBitmap(R.drawable.left_big_1, 72 * k,(88 * k)), position, k);
-        texPanels[1][2] = new Texture(getScaledBitmap(R.drawable.left_big_2, 72 * k,(88 * k)), position, k);
-        texPanels[1][3] = new Texture(getScaledBitmap(R.drawable.left_big_3, 72 * k, (88 * k)),position, k);
+        position = new Point(142 * k, 46 * k).sum(panel.pos);
+        texPanels[1][0] = new Texture(getScaledBitmap(R.drawable.left_big_0, 78 * k,(96 * k)), position , k);
+        texPanels[1][1] = new Texture(getScaledBitmap(R.drawable.left_big_1, 78 * k,(96 * k)), position, k);
+        texPanels[1][2] = new Texture(getScaledBitmap(R.drawable.left_big_2, 78 * k,(96 * k)), position, k);
+        texPanels[1][3] = new Texture(getScaledBitmap(R.drawable.left_big_3, 78 * k, (96 * k)),position, k);
 
-        position = new Point(370 * k, 50 * k).sum(panel.pos);
-        texPanels[2][0] = new Texture(getScaledBitmap(R.drawable.right_big_0, 72 * k,(88 * k)),position , k);
-        texPanels[2][1] = new Texture(getScaledBitmap(R.drawable.right_big_1, 72 * k, (88 * k)),position, k);
-        texPanels[2][2] = new Texture(getScaledBitmap(R.drawable.right_big_2, 72 * k,(88 * k)), position, k);
-        texPanels[2][3] = new Texture(getScaledBitmap(R.drawable.right_big_3, 72 * k,(88 * k)), position, k);
+        position = new Point(369 * k, 46 * k).sum(panel.pos);
+        texPanels[2][0] = new Texture(getScaledBitmap(R.drawable.right_big_0, 78 * k,(96 * k)),position , k);
+        texPanels[2][1] = new Texture(getScaledBitmap(R.drawable.right_big_1, 78 * k, (96 * k)),position, k);
+        texPanels[2][2] = new Texture(getScaledBitmap(R.drawable.right_big_2, 78 * k,(96 * k)), position, k);
+        texPanels[2][3] = new Texture(getScaledBitmap(R.drawable.right_big_3, 78 * k,(96 * k)), position, k);
 
-        position = new Point(445 * k, 68 * k).sum(panel.pos);
-        texPanels[3][0] = new Texture(getScaledBitmap(R.drawable.right_small_0, 71 * k,(70 * k)), position, k);
-        texPanels[3][1] = new Texture(getScaledBitmap(R.drawable.right_small_1, 71 * k,(70 * k)), position, k);
-        texPanels[3][2] = new Texture(getScaledBitmap(R.drawable.right_small_2, 71 * k,(70 * k)), position, k);
-        texPanels[3][3] = new Texture(getScaledBitmap(R.drawable.right_small_3, 71 * k,(70 * k)), position, k);
+        position = new Point(449 * k, 67 * k).sum(panel.pos);
+        texPanels[3][0] = new Texture(getScaledBitmap(R.drawable.right_small_0, 78 * k,(75 * k)), position, k);
+        texPanels[3][1] = new Texture(getScaledBitmap(R.drawable.right_small_1, 78 * k,(75 * k)), position, k);
+        texPanels[3][2] = new Texture(getScaledBitmap(R.drawable.right_small_2, 78 * k,(75 * k)), position, k);
+        texPanels[3][3] = new Texture(getScaledBitmap(R.drawable.right_small_3, 78 * k,(75 * k)), position, k);
 
         Bitmap rPanelBitmap = BitmapFactory.decodeResource(res, R.drawable.panel_1_empty);
 
@@ -129,14 +129,14 @@ public class panel1 extends Panel {
             right = texDig[cur_r];
         }
         Point dotCenter = panel.getCenter();
-        Point posLeft = new Point(dotCenter.x - left.img.getWidth() * 1.15, (dotCenter.y - (left.img.getHeight()) / 2));
+        Point posLeft = new Point(dotCenter.x - left.img.getWidth() * 1.15, (dotCenter.y - left.img.getHeight() * 0.5));
         left.setPos(posLeft);
         left.draw(canvas);
-        Point posRight = new Point(dotCenter.x + left.img.getWidth() * 0.15, (dotCenter.y - (left.img.getHeight()) / 2));
+        Point posRight = new Point(dotCenter.x + left.img.getWidth() * 0.15, (dotCenter.y - left.img.getHeight() * 0.5));
         right.setPos(posRight);
         right.draw(canvas);
         Paint dotPaint = new Paint();
-        dotPaint.setARGB(255, 240, 80, 32);
+        dotPaint.setARGB(255, 240, 110, 50);
         canvas.drawCircle((float)dotCenter.x, (float)dotCenter.y + (float)(texDig[0].h * 0.45), (float)(texDig[0].h * 0.06), dotPaint);
     }
 
