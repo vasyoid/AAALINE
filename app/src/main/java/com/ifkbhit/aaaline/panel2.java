@@ -18,7 +18,7 @@ public class panel2 extends Panel {
 
         this.res = res;
         reversible = false;
-        Bitmap panelBitmap = BitmapFactory.decodeResource(res, R.drawable.panel_1);
+        Bitmap panelBitmap = BitmapFactory.decodeResource(res, R.drawable.panel);
         double k;
         if (isVertical) {
             k = (1.0 - Config.CAR_Y_OFFSET_K) * 393.0 / Config.CAR_H;
@@ -37,17 +37,17 @@ public class panel2 extends Panel {
         }
         Bitmap[] numBitmaps = new Bitmap[11];
 
-        numBitmaps[0] = BitmapFactory.decodeResource(res, R.drawable.dig_2_0);
-        numBitmaps[1] = BitmapFactory.decodeResource(res, R.drawable.dig_2_1);
-        numBitmaps[2] = BitmapFactory.decodeResource(res, R.drawable.dig_2_2);
-        numBitmaps[3] = BitmapFactory.decodeResource(res, R.drawable.dig_2_3);
-        numBitmaps[4] = BitmapFactory.decodeResource(res, R.drawable.dig_2_4);
-        numBitmaps[5] = BitmapFactory.decodeResource(res, R.drawable.dig_2_5);
-        numBitmaps[6] = BitmapFactory.decodeResource(res, R.drawable.dig_2_6);
-        numBitmaps[7] = BitmapFactory.decodeResource(res, R.drawable.dig_2_7);
-        numBitmaps[8] = BitmapFactory.decodeResource(res, R.drawable.dig_2_8);
-        numBitmaps[9] = BitmapFactory.decodeResource(res, R.drawable.dig_2_9);
-        numBitmaps[10] = BitmapFactory.decodeResource(res, R.drawable.dig_2_line);
+        numBitmaps[0] = BitmapFactory.decodeResource(res, R.drawable.d0);
+        numBitmaps[1] = BitmapFactory.decodeResource(res, R.drawable.d1);
+        numBitmaps[2] = BitmapFactory.decodeResource(res, R.drawable.d2);
+        numBitmaps[3] = BitmapFactory.decodeResource(res, R.drawable.d3);
+        numBitmaps[4] = BitmapFactory.decodeResource(res, R.drawable.d4);
+        numBitmaps[5] = BitmapFactory.decodeResource(res, R.drawable.d5);
+        numBitmaps[6] = BitmapFactory.decodeResource(res, R.drawable.d6);
+        numBitmaps[7] = BitmapFactory.decodeResource(res, R.drawable.d7);
+        numBitmaps[8] = BitmapFactory.decodeResource(res, R.drawable.d8);
+        numBitmaps[9] = BitmapFactory.decodeResource(res, R.drawable.d9);
+        numBitmaps[10] = BitmapFactory.decodeResource(res, R.drawable.dl);
 
         double cft_h = h / panelBitmap.getHeight();
         double cft_w = w / panelBitmap.getWidth();
@@ -64,10 +64,10 @@ public class panel2 extends Panel {
 
         Bitmap[] indBitmaps = new Bitmap[4];
 
-        indBitmaps[0] = BitmapFactory.decodeResource(res, R.drawable.ind_0);
-        indBitmaps[1] = BitmapFactory.decodeResource(res, R.drawable.ind_1);
-        indBitmaps[2] = BitmapFactory.decodeResource(res, R.drawable.ind_2);
-        indBitmaps[3] = BitmapFactory.decodeResource(res, R.drawable.ind_3);
+        indBitmaps[0] = BitmapFactory.decodeResource(res, R.drawable.ind0);
+        indBitmaps[1] = BitmapFactory.decodeResource(res, R.drawable.ind1);
+        indBitmaps[2] = BitmapFactory.decodeResource(res, R.drawable.ind2);
+        indBitmaps[3] = BitmapFactory.decodeResource(res, R.drawable.ind3);
 
         h = indBitmaps[0].getHeight() * cft_h;
         w = indBitmaps[0].getWidth() * cft_w;
@@ -87,25 +87,25 @@ public class panel2 extends Panel {
 
         Bitmap[][] backBitmaps = new Bitmap[4][4];
 
-        backBitmaps[0][0] = BitmapFactory.decodeResource(res, R.drawable.b_00);
-        backBitmaps[0][1] = BitmapFactory.decodeResource(res, R.drawable.b_01);
-        backBitmaps[0][2] = BitmapFactory.decodeResource(res, R.drawable.b_02);
-        backBitmaps[0][3] = BitmapFactory.decodeResource(res, R.drawable.b_03);
+        backBitmaps[0][0] = BitmapFactory.decodeResource(res, R.drawable.b00);
+        backBitmaps[0][1] = BitmapFactory.decodeResource(res, R.drawable.b01);
+        backBitmaps[0][2] = BitmapFactory.decodeResource(res, R.drawable.b02);
+        backBitmaps[0][3] = BitmapFactory.decodeResource(res, R.drawable.b03);
 
-        backBitmaps[1][0] = BitmapFactory.decodeResource(res, R.drawable.b_10);
-        backBitmaps[1][1] = BitmapFactory.decodeResource(res, R.drawable.b_11);
-        backBitmaps[1][2] = BitmapFactory.decodeResource(res, R.drawable.b_12);
-        backBitmaps[1][3] = BitmapFactory.decodeResource(res, R.drawable.b_13);
+        backBitmaps[1][0] = BitmapFactory.decodeResource(res, R.drawable.b10);
+        backBitmaps[1][1] = BitmapFactory.decodeResource(res, R.drawable.b11);
+        backBitmaps[1][2] = BitmapFactory.decodeResource(res, R.drawable.b12);
+        backBitmaps[1][3] = BitmapFactory.decodeResource(res, R.drawable.b13);
 
-        backBitmaps[2][0] = BitmapFactory.decodeResource(res, R.drawable.b_20);
-        backBitmaps[2][1] = BitmapFactory.decodeResource(res, R.drawable.b_21);
-        backBitmaps[2][2] = BitmapFactory.decodeResource(res, R.drawable.b_22);
-        backBitmaps[2][3] = BitmapFactory.decodeResource(res, R.drawable.b_23);
+        backBitmaps[2][0] = BitmapFactory.decodeResource(res, R.drawable.b20);
+        backBitmaps[2][1] = BitmapFactory.decodeResource(res, R.drawable.b21);
+        backBitmaps[2][2] = BitmapFactory.decodeResource(res, R.drawable.b22);
+        backBitmaps[2][3] = BitmapFactory.decodeResource(res, R.drawable.b23);
 
-        backBitmaps[3][0] = BitmapFactory.decodeResource(res, R.drawable.b_30);
-        backBitmaps[3][1] = BitmapFactory.decodeResource(res, R.drawable.b_31);
-        backBitmaps[3][2] = BitmapFactory.decodeResource(res, R.drawable.b_32);
-        backBitmaps[3][3] = BitmapFactory.decodeResource(res, R.drawable.b_33);
+        backBitmaps[3][0] = BitmapFactory.decodeResource(res, R.drawable.b30);
+        backBitmaps[3][1] = BitmapFactory.decodeResource(res, R.drawable.b31);
+        backBitmaps[3][2] = BitmapFactory.decodeResource(res, R.drawable.b32);
+        backBitmaps[3][3] = BitmapFactory.decodeResource(res, R.drawable.b33);
 
         h = backBitmaps[0][0].getHeight() * cft_h;
         w = backBitmaps[0][0].getWidth() * cft_w;
@@ -118,21 +118,21 @@ public class panel2 extends Panel {
             }
         }
 
-        backBitmaps[0][0] = BitmapFactory.decodeResource(res, R.drawable.f_00);
-        backBitmaps[0][1] = BitmapFactory.decodeResource(res, R.drawable.f_01);
-        backBitmaps[0][2] = BitmapFactory.decodeResource(res, R.drawable.f_02);
+        backBitmaps[0][0] = BitmapFactory.decodeResource(res, R.drawable.f01);
+        backBitmaps[0][1] = BitmapFactory.decodeResource(res, R.drawable.f21);
+        backBitmaps[0][2] = BitmapFactory.decodeResource(res, R.drawable.f02);
 
-        backBitmaps[1][0] = BitmapFactory.decodeResource(res, R.drawable.f_10);
-        backBitmaps[1][1] = BitmapFactory.decodeResource(res, R.drawable.f_11);
-        backBitmaps[1][2] = BitmapFactory.decodeResource(res, R.drawable.f_12);
+        backBitmaps[1][0] = BitmapFactory.decodeResource(res, R.drawable.f11);
+        backBitmaps[1][1] = BitmapFactory.decodeResource(res, R.drawable.f31);
+        backBitmaps[1][2] = BitmapFactory.decodeResource(res, R.drawable.f51);
 
-        backBitmaps[2][0] = BitmapFactory.decodeResource(res, R.drawable.f_20);
-        backBitmaps[2][1] = BitmapFactory.decodeResource(res, R.drawable.f_21);
-        backBitmaps[2][2] = BitmapFactory.decodeResource(res, R.drawable.f_22);
+        backBitmaps[2][0] = BitmapFactory.decodeResource(res, R.drawable.f61);
+        backBitmaps[2][1] = BitmapFactory.decodeResource(res, R.drawable.f51);
+        backBitmaps[2][2] = BitmapFactory.decodeResource(res, R.drawable.f21);
 
-        backBitmaps[3][0] = BitmapFactory.decodeResource(res, R.drawable.f_30);
-        backBitmaps[3][1] = BitmapFactory.decodeResource(res, R.drawable.f_31);
-        backBitmaps[3][2] = BitmapFactory.decodeResource(res, R.drawable.f_32);
+        backBitmaps[3][0] = BitmapFactory.decodeResource(res, R.drawable.f71);
+        backBitmaps[3][1] = BitmapFactory.decodeResource(res, R.drawable.f31);
+        backBitmaps[3][2] = BitmapFactory.decodeResource(res, R.drawable.f31);
 
         h = backBitmaps[0][0].getHeight() * cft_h;
         w = backBitmaps[0][0].getWidth() * cft_w;
@@ -145,8 +145,8 @@ public class panel2 extends Panel {
             }
         }
 
-        Bitmap lPanelBitmap = BitmapFactory.decodeResource(res, R.drawable.panel_0);
-        Bitmap rPanelBitmap = BitmapFactory.decodeResource(res, R.drawable.panel_2);
+        Bitmap lPanelBitmap = BitmapFactory.decodeResource(res, R.drawable.panel);
+        Bitmap rPanelBitmap = BitmapFactory.decodeResource(res, R.drawable.panel);
 
         k = (isVertical ? (1.0 - Config.CAR_Y_OFFSET_K) * 120.0 / Config.CAR_H : 0.2);
         double lh = cnvH * k;
