@@ -610,7 +610,10 @@ public class MainActivity extends Activity {
                     break;
                 case 2:
                     panel = new panel3(W, H, getResources(), false);
-                break;
+                    break;
+                case 3:
+                    panel = new panel4(W, H, getResources(), false);
+
             }
             panel.setActive(obstacle_set && cur_obstacle != 3);
             invert.setActive(panel.reversible);
@@ -687,9 +690,9 @@ public class MainActivity extends Activity {
                     double tmpPos = (xPos < 0 ? panel.r_panel : panel.l_panel).pos.x + xPos;
                     if (Math.abs(panel.panel.xPos) > W / 3) {
                         if (panel.panel.xPos < 0) {
-                            cur_panel = (cur_panel + 1) % 3;
+                            cur_panel = (cur_panel + 1) % 4;
                         } else {
-                            cur_panel = (cur_panel + 2) % 3;
+                            cur_panel = (cur_panel + 3) % 4;
                         }
                         switch (cur_panel) {
                             case 0:
@@ -700,6 +703,9 @@ public class MainActivity extends Activity {
                                 break;
                             case 2:
                                 panel = new panel3(W, H, getResources(), false);
+                                break;
+                            case 3:
+                                panel = new panel4(W, H, getResources(), false);
                         }
                         panel.panel.xPos = tmpPos - panel.panel.pos.x;
                         panel.setActive(obstacle_set && cur_obstacle != 3);

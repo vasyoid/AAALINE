@@ -16,7 +16,7 @@ public class panel3 extends Panel {
         this.res = res;
         reversible = true;
         double k = (isVertical ? 0.08 : 0.2);
-        Bitmap panelBitmap = BitmapFactory.decodeResource(res, R.drawable.panel);
+        Bitmap panelBitmap = BitmapFactory.decodeResource(res, R.drawable.panel_277);
         h = cnvH * k;
         w = panelBitmap.getWidth() * h / panelBitmap.getHeight();
         panel = new Texture(Bitmap.createScaledBitmap(panelBitmap, (int) w, (int) h, false));
@@ -26,106 +26,106 @@ public class panel3 extends Panel {
         else {
             panel.setPos(new Point((cnvW - w) / 2, cnvH / 4 - h / 2));
         }
-        Bitmap tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f01);
+        Bitmap tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f01_277);
         int w1 = (int)(tmpBmp.getWidth() * h / tmpBmp.getHeight());
         greenInd[0] = new Texture(Bitmap.createScaledBitmap(tmpBmp, w1, (int)h, false));
         greenInd[0].setPos(new Point(panel.pos.x  + 0.033 * w, panel.pos.y));
-        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f11);
+        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f11_277);
         w1 = (int) (tmpBmp.getWidth() * h / tmpBmp.getHeight());
         greenInd[1] = new Texture(Bitmap.createScaledBitmap(tmpBmp, w1, (int)h, false));
         greenInd[1].setPos(new Point(panel.pos.x  + 0.083 * w, panel.pos.y));
-        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f21);
+        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f21_277);
         w1 = (int) (tmpBmp.getWidth() * h / tmpBmp.getHeight());
         greenInd[2] = new Texture(Bitmap.createScaledBitmap(tmpBmp, w1, (int)h, false));
         greenInd[2].setPos(new Point(panel.pos.x  + 0.223 * w, panel.pos.y));
-        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f31);
+        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f31_277);
         w1 = (int) (tmpBmp.getWidth() * h / tmpBmp.getHeight());
         greenInd[3] = new Texture(Bitmap.createScaledBitmap(tmpBmp, w1, (int)h, false));
         greenInd[3].setPos(new Point(panel.pos.x  + 0.363 * w, panel.pos.y));
-        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f41);
+        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f41_277);
         w1 = (int) (tmpBmp.getWidth() * h / tmpBmp.getHeight());
         greenInd[4] = new Texture(Bitmap.createScaledBitmap(tmpBmp, w1, (int)h, false));
         greenInd[4].setPos(new Point(panel.pos.x  + 0.503 * w, panel.pos.y));
-        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f51);
+        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f51_277);
         w1 = (int) (tmpBmp.getWidth() * h / tmpBmp.getHeight());
         greenInd[5] = new Texture(Bitmap.createScaledBitmap(tmpBmp, w1, (int)h, false));
         greenInd[5].setPos(new Point(panel.pos.x  + 0.646 * w, panel.pos.y));
-        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f61);
+        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f61_277);
         w1 = (int) (tmpBmp.getWidth() * h / tmpBmp.getHeight());
         greenInd[6] = new Texture(Bitmap.createScaledBitmap(tmpBmp, w1, (int)h, false));
         greenInd[6].setPos(new Point(panel.pos.x  + 0.786 * w, panel.pos.y));
-        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f71);
+        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f71_277);
         w1 = (int) (tmpBmp.getWidth() * h / tmpBmp.getHeight());
         greenInd[7] = new Texture(Bitmap.createScaledBitmap(tmpBmp, w1, (int)h, false));
         greenInd[7].setPos(new Point(panel.pos.x  + 0.926 * w, panel.pos.y));
 
-        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f02);
+        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f02_277);
         w1 = (int) (tmpBmp.getWidth() * h / tmpBmp.getHeight());
         redInd[0] = new Texture(Bitmap.createScaledBitmap(tmpBmp, w1, (int)h, false));
         redInd[0].setPos(new Point(panel.pos.x  + 0.033 * w, panel.pos.y));
-        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f12);
+        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f12_277);
         w1 = (int) (tmpBmp.getWidth() * h / tmpBmp.getHeight());
         redInd[1] = new Texture(Bitmap.createScaledBitmap(tmpBmp, w1, (int)h, false));
         redInd[1].setPos(new Point(panel.pos.x  + 0.083 * w, panel.pos.y));
-        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f22);
+        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f22_277);
         w1 = (int) (tmpBmp.getWidth() * h / tmpBmp.getHeight());
         redInd[2] = new Texture(Bitmap.createScaledBitmap(tmpBmp, w1, (int)h, false));
         redInd[2].setPos(new Point(panel.pos.x  + 0.223 * w, panel.pos.y));
-        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f32);
+        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f32_277);
         w1 = (int) (tmpBmp.getWidth() * h / tmpBmp.getHeight());
         redInd[3] = new Texture(Bitmap.createScaledBitmap(tmpBmp, w1, (int)h, false));
         redInd[3].setPos(new Point(panel.pos.x  + 0.363 * w, panel.pos.y));
-        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f42);
+        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f42_277);
         w1 = (int) (tmpBmp.getWidth() * h / tmpBmp.getHeight());
         redInd[4] = new Texture(Bitmap.createScaledBitmap(tmpBmp, w1, (int)h, false));
         redInd[4].setPos(new Point(panel.pos.x  + 0.503 * w, panel.pos.y));
-        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f52);
+        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f52_277);
         w1 = (int) (tmpBmp.getWidth() * h / tmpBmp.getHeight());
         redInd[5] = new Texture(Bitmap.createScaledBitmap(tmpBmp, w1, (int)h, false));
         redInd[5].setPos(new Point(panel.pos.x  + 0.646 * w, panel.pos.y));
-        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f62);
+        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f62_277);
         w1 = (int) (tmpBmp.getWidth() * h / tmpBmp.getHeight());
         redInd[6] = new Texture(Bitmap.createScaledBitmap(tmpBmp, w1, (int)h, false));
         redInd[6].setPos(new Point(panel.pos.x  + 0.786 * w, panel.pos.y));
-        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f72);
+        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f72_277);
         w1 = (int) (tmpBmp.getWidth() * h / tmpBmp.getHeight());
         redInd[7] = new Texture(Bitmap.createScaledBitmap(tmpBmp, w1, (int)h, false));
         redInd[7].setPos(new Point(panel.pos.x  + 0.926 * w, panel.pos.y));
 
-        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f00);
+        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f00_277);
         w1 = (int) (tmpBmp.getWidth() * h / tmpBmp.getHeight());
         whiteInd[0] = new Texture(Bitmap.createScaledBitmap(tmpBmp, w1, (int)h, false));
         whiteInd[0].setPos(new Point(panel.pos.x  + 0.033 * w, panel.pos.y));
-        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f70);
+        tmpBmp = BitmapFactory.decodeResource(res, R.drawable.f70_277);
         w1 = (int) (tmpBmp.getWidth() * h / tmpBmp.getHeight());
         whiteInd[1] = new Texture(Bitmap.createScaledBitmap(tmpBmp, w1, (int)h, false));
         whiteInd[1].setPos(new Point(panel.pos.x  + 0.926 * w, panel.pos.y));
 
 
 
-        Bitmap rPanelBitmap = BitmapFactory.decodeResource(res, R.drawable.panel);
-        Bitmap lPanelBitmap = BitmapFactory.decodeResource(res, R.drawable.empty);
+        Bitmap rPanelBitmap = BitmapFactory.decodeResource(res, R.drawable.panel_227);
+        Bitmap lPanelBitmap = BitmapFactory.decodeResource(res, R.drawable.empty_218);
 
         k = (isVertical ? (1.0 - Config.CAR_Y_OFFSET_K) * 393.0 / Config.CAR_H : 0.55);
 
         double lh = cnvH * k;
         double lw = lPanelBitmap.getWidth() * lh / lPanelBitmap.getHeight();
 
-        k = (isVertical ? (1.0 - Config.CAR_Y_OFFSET_K) * 120.0 / Config.CAR_H : 0.2);
+        k = (isVertical ? (1.0 - Config.CAR_Y_OFFSET_K) * 300.0 / Config.CAR_H : 0.45);
 
         double rh = cnvH * k;
         double rw = rPanelBitmap.getWidth() * rh / rPanelBitmap.getHeight();
 
-        r_panel = new Texture(Bitmap.createScaledBitmap(rPanelBitmap, (int) (rw * 1.3), (int) (rh * 1.3), false));
+        r_panel = new Texture(Bitmap.createScaledBitmap(rPanelBitmap, (int) rw, (int) rh, false));
         l_panel = new Texture(Bitmap.createScaledBitmap(lPanelBitmap, (int) lw, (int) lh, false));
 
         if (isVertical) {
             l_panel.setPos(new Point(-lw * 0.87, cnvH * 0.425));
-            r_panel.setPos(new Point(cnvW - 0.21 * rw, cnvH * (Config.CAR_Y_OFFSET_K / 2) + ((1 - Config.CAR_Y_OFFSET_K) * cnvH) / 2.0 - r_panel.img.getWidth() * 1.3 / 16.0));
+            r_panel.setPos(new Point(cnvW - 0.21 * rw, cnvH * 0.425));
         }
         else {
             l_panel.setPos(new Point((-lw - w) / 2, cnvH * 0.28 - lh / 2));
-            r_panel.setPos(new Point(cnvW + (w - rw * 1.3) / 2, cnvH / 4 - rh * 1.3 / 2));
+            r_panel.setPos(new Point(cnvW + Math.abs(w - rw) / 2, cnvH * 0.28 - rh / 2));
         }
     }
 

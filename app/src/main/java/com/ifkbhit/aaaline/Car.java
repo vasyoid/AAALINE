@@ -56,8 +56,10 @@ public class Car {
             panel = new panel1(W, H, -1, -1, -1, res, false, true);
         } else if (cur_panel == 1) {
             panel = new panel2(W, H, res, true);
-        } else {
+        } else if (cur_panel == 2) {
             panel = new panel3(W, H, res, true);
+        } else {
+            panel = new panel4(W, H, res, true);
         }
     }
 
@@ -69,16 +71,18 @@ public class Car {
             result = true;
             boolean isActive = panel.isActive;
             if (xPos < 0) {
-                cur_panel = (cur_panel + 1) % 3;
+                cur_panel = (cur_panel + 1) % 4;
             } else {
-                cur_panel = (cur_panel + 2) % 3;
+                cur_panel = (cur_panel + 3) % 4;
             }
             if (cur_panel == 0) {
                 panel = new panel1(W, H, -1, -1, -1, res, false, true);
             } else if (cur_panel == 1) {
                 panel = new panel2(W, H, res, true);
-            } else {
+            } else if (cur_panel == 2) {
                 panel = new panel3(W, H, res, true);
+            } else {
+                panel = new panel4(W, H, res, true);
             }
             panel.panel.xPos = tmpPos - panel.panel.pos.x;
             panel.setActive(isActive);

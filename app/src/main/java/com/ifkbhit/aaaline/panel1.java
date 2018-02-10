@@ -26,7 +26,7 @@ public class panel1 extends Panel {
         this.res = res;
         reversible = true;
         reverse = isReverse;
-        Bitmap panelBitmap = BitmapFactory.decodeResource(res, R.drawable.panel);
+        Bitmap panelBitmap = BitmapFactory.decodeResource(res, R.drawable.panel_216);
 
         double k = (1.0 - Config.CAR_Y_OFFSET_K) * 120.0 / Config.CAR_H;
         if (height < 0) {
@@ -45,16 +45,16 @@ public class panel1 extends Panel {
         }
         panel.setScaled(1.3);
 
-        digits[0] = getBitmap(R.drawable.d0);
-        digits[1] = getBitmap(R.drawable.d1);
-        digits[2] = getBitmap(R.drawable.d2);
-        digits[3] = getBitmap(R.drawable.d3);
-        digits[4] = getBitmap(R.drawable.d4);
-        digits[5] = getBitmap(R.drawable.d5);
-        digits[6] = getBitmap(R.drawable.d6);
-        digits[7] = getBitmap(R.drawable.d7);
-        digits[8] = getBitmap(R.drawable.d8);
-        digits[9] = getBitmap(R.drawable.d9);
+        digits[0] = getBitmap(R.drawable.d0_216);
+        digits[1] = getBitmap(R.drawable.d1_216);
+        digits[2] = getBitmap(R.drawable.d2_216);
+        digits[3] = getBitmap(R.drawable.d3_216);
+        digits[4] = getBitmap(R.drawable.d4_216);
+        digits[5] = getBitmap(R.drawable.d5_216);
+        digits[6] = getBitmap(R.drawable.d6_216);
+        digits[7] = getBitmap(R.drawable.d7_216);
+        digits[8] = getBitmap(R.drawable.d8_216);
+        digits[9] = getBitmap(R.drawable.d9_216);
 
         for (int i = 0; i < 10; i++) {
             double kh = 0.9 * 98.0 / 174.0;
@@ -62,7 +62,7 @@ public class panel1 extends Panel {
             double w = panel.img.getWidth() * kw;
             double h = panel.img.getHeight() * kh;
             if (line == null) {
-                line = new Texture(Bitmap.createScaledBitmap(getBitmap(R.drawable.dl), (int) w, (int) h, true));
+                line = new Texture(Bitmap.createScaledBitmap(getBitmap(R.drawable.dl_216), (int) w, (int) h, true));
             }
             texDig[i] = new Texture(Bitmap.createScaledBitmap(digits[i], (int) w, (int) h, true));
             digits[i] = null;
@@ -71,39 +71,39 @@ public class panel1 extends Panel {
         k = panel.img.getHeight() / 174.0;
 
         Point position = new Point(59 * k, 67 * k).sum(panel.pos);
-        texPanels[0][0] = new Texture(getScaledBitmap(R.drawable.f12, 78 * k,(75 * k)), position, k);
-        texPanels[0][1] = new Texture(getScaledBitmap(R.drawable.f02, 78 * k,(75 * k)), position, k);
-        texPanels[0][2] = new Texture(getScaledBitmap(R.drawable.f21, 78 * k,(75 * k)), position, k);
-        texPanels[0][3] = new Texture(getScaledBitmap(R.drawable.f01, 78 * k, (75 * k)),position, k);
+        texPanels[0][3] = new Texture(getScaledBitmap(R.drawable.f00_216, 78 * k,(75 * k)), position, k);
+        texPanels[0][2] = new Texture(getScaledBitmap(R.drawable.f01_216, 78 * k,(75 * k)), position, k);
+        texPanels[0][1] = new Texture(getScaledBitmap(R.drawable.f02_216, 78 * k,(75 * k)), position, k);
+        texPanels[0][0] = new Texture(getScaledBitmap(R.drawable.f03_216, 78 * k, (75 * k)),position, k);
 
         position = new Point(142 * k, 46 * k).sum(panel.pos);
-        texPanels[1][0] = new Texture(getScaledBitmap(R.drawable.f13, 78 * k,(96 * k)), position , k);
-        texPanels[1][1] = new Texture(getScaledBitmap(R.drawable.f51, 78 * k,(96 * k)), position, k);
-        texPanels[1][2] = new Texture(getScaledBitmap(R.drawable.f31, 78 * k,(96 * k)), position, k);
-        texPanels[1][3] = new Texture(getScaledBitmap(R.drawable.f11, 78 * k, (96 * k)),position, k);
+        texPanels[1][3] = new Texture(getScaledBitmap(R.drawable.f10_216, 78 * k,(96 * k)), position , k);
+        texPanels[1][2] = new Texture(getScaledBitmap(R.drawable.f11_216, 78 * k,(96 * k)), position, k);
+        texPanels[1][1] = new Texture(getScaledBitmap(R.drawable.f12_216, 78 * k,(96 * k)), position, k);
+        texPanels[1][0] = new Texture(getScaledBitmap(R.drawable.f13_216, 78 * k, (96 * k)),position, k);
 
         position = new Point(369 * k, 46 * k).sum(panel.pos);
-        texPanels[2][0] = new Texture(getScaledBitmap(R.drawable.f23, 78 * k,(96 * k)),position , k);
-        texPanels[2][1] = new Texture(getScaledBitmap(R.drawable.f21, 78 * k, (96 * k)),position, k);
-        texPanels[2][2] = new Texture(getScaledBitmap(R.drawable.f51, 78 * k,(96 * k)), position, k);
-        texPanels[2][3] = new Texture(getScaledBitmap(R.drawable.f61, 78 * k,(96 * k)), position, k);
+        texPanels[2][3] = new Texture(getScaledBitmap(R.drawable.f20_216, 78 * k,(96 * k)),position , k);
+        texPanels[2][2] = new Texture(getScaledBitmap(R.drawable.f21_216, 78 * k, (96 * k)),position, k);
+        texPanels[2][1] = new Texture(getScaledBitmap(R.drawable.f22_216, 78 * k,(96 * k)), position, k);
+        texPanels[2][0] = new Texture(getScaledBitmap(R.drawable.f23_216, 78 * k,(96 * k)), position, k);
 
         position = new Point(449 * k, 67 * k).sum(panel.pos);
-        texPanels[3][0] = new Texture(getScaledBitmap(R.drawable.f33, 78 * k,(75 * k)), position, k);
-        texPanels[3][1] = new Texture(getScaledBitmap(R.drawable.f31, 78 * k,(75 * k)), position, k);
-        texPanels[3][2] = new Texture(getScaledBitmap(R.drawable.f31, 78 * k,(75 * k)), position, k);
-        texPanels[3][3] = new Texture(getScaledBitmap(R.drawable.f71, 78 * k,(75 * k)), position, k);
+        texPanels[3][3] = new Texture(getScaledBitmap(R.drawable.f30_216, 78 * k,(75 * k)), position, k);
+        texPanels[3][2] = new Texture(getScaledBitmap(R.drawable.f31_216, 78 * k,(75 * k)), position, k);
+        texPanels[3][1] = new Texture(getScaledBitmap(R.drawable.f32_216, 78 * k,(75 * k)), position, k);
+        texPanels[3][0] = new Texture(getScaledBitmap(R.drawable.f33_216, 78 * k,(75 * k)), position, k);
 
-        Bitmap rPanelBitmap = BitmapFactory.decodeResource(res, R.drawable.empty);
+        Bitmap rPanelBitmap = BitmapFactory.decodeResource(res, R.drawable.empty_218);
 
         k = (isVertical ? (1.0 - Config.CAR_Y_OFFSET_K) * 393.0 / Config.CAR_H : 0.55);
 
         double rh = cnvH * k;
         double rw = rPanelBitmap.getWidth() * rh / rPanelBitmap.getHeight();
 
-        Bitmap lPanelBitmap = BitmapFactory.decodeResource(res, R.drawable.panel);
+        Bitmap lPanelBitmap = BitmapFactory.decodeResource(res, R.drawable.panel_227);
 
-        k = (isVertical ? 0.08 : 0.2);
+        k = (isVertical ? (1.0 - Config.CAR_Y_OFFSET_K) * 300.0 / Config.CAR_H : 0.45);
 
         double lh = cnvH * k, lw = lPanelBitmap.getWidth() * lh / lPanelBitmap.getHeight();
 
@@ -111,11 +111,11 @@ public class panel1 extends Panel {
         r_panel = new Texture(Bitmap.createScaledBitmap(rPanelBitmap, (int) rw, (int) rh, false));
 
         if (isVertical) {
-            l_panel.setPos(new Point(-0.75 * lw, cnvH * 0.47));
+            l_panel.setPos(new Point(-0.85 * lw, cnvH * 0.425));
             r_panel.setPos(new Point(cnvW - 0.21 * rw, cnvH * 0.425));
         }
         else {
-            l_panel.setPos(new Point(-lw - 1, y - lh / 2));
+            l_panel.setPos(new Point(-lw - 1, cnvH * 0.28 - lh / 2));
             r_panel.setPos(new Point(cnvW + (w * 1.3 - rw) / 2, cnvH * 0.28 - rh / 2));
         }
     }
