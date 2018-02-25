@@ -7,6 +7,7 @@ import android.graphics.Canvas;
 
 abstract public class Panel {
 
+    boolean showSmall = false;
     boolean isActive = false;
     double w, h;
     MyTime mvTimer = null, invTimer = null;
@@ -121,13 +122,13 @@ abstract public class Panel {
         this.isUp = isUp;
         double cur_dist = 1e9;
         for (int i = 0; i < 4; ++i) {
-            info[i] = ((int)(info[i] * 10)) * 0.1;
+            info[i] = ((int)(info[i] * 100)) * 0.01;
             if (info[i] >= 0 && cur_dist > info[i]) {
                 cur_dist = info[i];
             }
             state[i] = getLevel(info[i]);
         }
-        if (cur_dist < 0.3) {
+        if (cur_dist < 0.09 || (cur_dist < 0.3 && !showSmall)) {
             cur_dist = 0.0;
         }
         cur_l = (int)cur_dist;

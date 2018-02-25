@@ -15,19 +15,20 @@ public class panel4 extends Panel {
 
         this.res = res;
         reversible = false;
+        showSmall = true;
         Bitmap panelBitmap = BitmapFactory.decodeResource(res, R.drawable.panel_227);
         double k;
         if (isVertical) {
-            k = (1.0 - Config.CAR_Y_OFFSET_K) * 300.0 / Config.CAR_H;
+            k = (1.0 - Config.CAR_Y_OFFSET_K) * 210.0 / Config.CAR_H;
         }
         else {
-            k = 0.45;
+            k = 0.35;
         }
         h = cnvH * k;
         w = panelBitmap.getWidth() * h / panelBitmap.getHeight();
         panel = new Texture(Bitmap.createScaledBitmap(panelBitmap, (int) w, (int) h, false));
         if (isVertical) {
-            panel.setPos(new Point((cnvW - panel.img.getWidth()) / 2.0, cnvH * 0.425));
+            panel.setPos(new Point((cnvW - panel.img.getWidth()) / 2.0, cnvH * 0.445));
         }
         else {
             panel.setPos(new Point((cnvW - w) / 2, cnvH * 0.28 - h / 2));
@@ -106,8 +107,8 @@ public class panel4 extends Panel {
         r_panel = new Texture(Bitmap.createScaledBitmap(rPanelBitmap, (int) (rw * 1.3), (int) (rh * 1.3), false));
 
         if (isVertical) {
-            l_panel.setPos(new Point(-0.76 * lw, cnvH * 0.47));
-            r_panel.setPos(new Point(cnvW - 0.20 * rw, cnvH * (Config.CAR_Y_OFFSET_K / 2) + ((1 - Config.CAR_Y_OFFSET_K) * cnvH) / 2.0 - r_panel.img.getWidth() * 1.3 / 16.0));
+            l_panel.setPos(new Point(-0.71 * lw, cnvH * 0.47));
+            r_panel.setPos(new Point(cnvW - 0.34 * rw, cnvH * (Config.CAR_Y_OFFSET_K / 2) + ((1 - Config.CAR_Y_OFFSET_K) * cnvH) / 2.0 - r_panel.img.getWidth() * 1.3 / 16.0));
         }
         else {
             l_panel.setPos(new Point(-lw - 1, cnvH / 4 - lh / 2));
@@ -157,13 +158,10 @@ public class panel4 extends Panel {
         if (val < 0) {
             return 0;
         }
-//        if (val <= (isUp ? -10 : 0.41)) {
-//            return 4;
-//        }
-        if (val <= (isUp ? 0.51 : 0.71)) {
+        if (val <= (isUp ? 0.51 : 0.51)) {
             return 3;
         }
-        if (val <= (isUp ? 0.71 : 0.91)) {
+        if (val <= (isUp ? 0.71 : 0.71)) {
             return 2;
         }
         if (val <= (isUp ? 0.91 : 1.31)) {

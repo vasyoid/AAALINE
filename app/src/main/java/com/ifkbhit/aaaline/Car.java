@@ -98,7 +98,7 @@ public class Car {
         double scale = isUp ? 0.9 / (sensors[1].sum(texture.pos).y - upper_net.pos.y) :
                 2.0 / (lower_net.pos.y + lower_net.h - sensors[1].sum(texture.pos).y);
         for (int i = 0; i < 4; ++i) {
-            infoForPanel[i] = b.states[i] ? sensors[i].sum(texture.pos).dist(b) * scale + 0.1 : -2;
+            infoForPanel[i] = b.states[i] ? sensors[i].sum(texture.pos).dist(b) * scale + 0.05 : -2;
         }
         this.panel.setPanel(infoForPanel, isUp);
     }
