@@ -3,9 +3,9 @@
     <string name="slogan">Интеллектуальные автомобильные\nсистемы</string>
     <string name="first_part_anim_duration">500</string>
     <string name="second_part_anim_duration">500</string>
-	<string name="info_title_216">AVILINE MP-216LED</string>
-	<string name="info_title_218">AVILINE MP-218LCD</string>
-	<string name="info_title_277">AVILINE MP-277LED</string>
+	<string name="info_title_216">AAALINE LED-14</string>
+	<string name="info_title_218">AAALINE LCD-14/18</string>
+	<string name="info_title_277">AAALINE SLED-14</string>
 	<string name="short_216">
         \t\t\t\tУниверсальная система помощи при парковке, для установки в передний или задний бампер автомобиля, со светодиодным цифровым LED-монитором, 4 датчика.
     </string>
