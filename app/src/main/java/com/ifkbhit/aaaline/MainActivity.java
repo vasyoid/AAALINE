@@ -509,7 +509,7 @@ public class MainActivity extends Activity {
             /* панель */
 
             panel = new panel1(W, H, W / 2, H / 4, H / 5, getResources(), false, false);
-            panel.setActive(obstacle_set && cur_obstacle != 3);
+            panel.setActive(obstacle_set && cur_obstacle != 4);
 
             /* кнопки */
 
@@ -528,7 +528,7 @@ public class MainActivity extends Activity {
 
             Obstacle.setBounds((W - carBitmap.getWidth()) / 2,
                                 (W + carBitmap.getWidth()) / 2, W);
-            obstacles = new Obstacle[9];
+            obstacles = new Obstacle[10];
             Bitmap[] bitmap = new Bitmap[1];
             Bitmap[] bitmap2 = new Bitmap[2];
             bitmap[0] = BitmapFactory.decodeResource(getResources(), R.drawable.cart);
@@ -540,25 +540,28 @@ public class MainActivity extends Activity {
             bitmap[0] = BitmapFactory.decodeResource(getResources(), R.drawable.fence);
             obstacles[2] = new Obstacle(bitmap,
                     new Point(0, H * 0.6), (int)(H * 0.33), new boolean[]{true, true, true, true});
+            bitmap[0] = BitmapFactory.decodeResource(getResources(), R.drawable.tree);
+            obstacles[3] = new Obstacle(bitmap,
+                    new Point(0, H * 0.6), (int)(H * 0.33), new boolean[]{false, true, true, false});
             bitmap[0] = BitmapFactory.decodeResource(getResources(), R.drawable.ghost);
-            obstacles[3] = new Obstacle(bitmap  ,
+            obstacles[4] = new Obstacle(bitmap  ,
                     new Point(0, H * 0.6), (int)(H * 0.33), new boolean[]{false, false, false, false});
             bitmap2[0] = BitmapFactory.decodeResource(getResources(), R.drawable.car_l);
             bitmap2[1] = BitmapFactory.decodeResource(getResources(), R.drawable.car_r);
-            obstacles[4] = new Obstacle(bitmap2,
+            obstacles[5] = new Obstacle(bitmap2,
                     new Point(0, H * 0.53), (int)(H * 0.4), new boolean[]{true, true, true, true});
             bitmap[0] = BitmapFactory.decodeResource(getResources(), R.drawable.bike);
-            obstacles[5] = new Obstacle(bitmap,
+            obstacles[6] = new Obstacle(bitmap,
                     new Point(0, H * 0.53), (int)(H * 0.4), new boolean[]{false, false, false, true});
             bitmap[0] = BitmapFactory.decodeResource(getResources(), R.drawable.cow);
-            obstacles[6] = new Obstacle(bitmap,
+            obstacles[7] = new Obstacle(bitmap,
                     new Point(0, H * 0.53), (int)(H * 0.4), new boolean[]{true, true, true, true});
             bitmap2[0] = BitmapFactory.decodeResource(getResources(), R.drawable.child_l);
             bitmap2[1] = BitmapFactory.decodeResource(getResources(), R.drawable.child_r);
-            obstacles[7] = new Obstacle(bitmap2,
+            obstacles[8] = new Obstacle(bitmap2,
                     new Point(0, H * 0.6), (int)(H * 0.33), new boolean[]{false, true, false, false});
             bitmap[0] = BitmapFactory.decodeResource(getResources(), R.drawable.dog);
-            obstacles[8] = new Obstacle(bitmap,
+            obstacles[9] = new Obstacle(bitmap,
                     new Point(0, H * 0.6), (int)(H * 0.33), new boolean[]{false, true, true, false});
 
             int th = (int)(H * 0.25);
@@ -579,7 +582,7 @@ public class MainActivity extends Activity {
                 panel.switchReverse();
             }
             if (obstacle_set) {
-                obstacles[cur_obstacle].animate(cur_obstacle == 7);
+                obstacles[cur_obstacle].animate(cur_obstacle == 8);
                 obstacles[cur_obstacle].draw(canvas);
                 panel.setPanel(obstacles[cur_obstacle].getDists(), Obstacle.xPos < W / 2);
             }
@@ -615,7 +618,7 @@ public class MainActivity extends Activity {
                     panel = new panel4(W, H, getResources(), false);
 
             }
-            panel.setActive(obstacle_set && cur_obstacle != 3);
+            panel.setActive(obstacle_set && cur_obstacle != 4);
             invert.setActive(panel.reversible);
         }
 
@@ -639,7 +642,7 @@ public class MainActivity extends Activity {
                     }
                     else if (obstacle_set && obstacles[cur_obstacle].onTap(event)) {
                         cur_obstacle = (cur_obstacle + 1) % obstacles.length;
-                        panel.setActive(cur_obstacle != 3);
+                        panel.setActive(cur_obstacle != 4);
                         obstacles[cur_obstacle].move(0);
                         if (cur_demo == 0) {
                             obstacles[cur_obstacle].setCaptured(true);
@@ -648,10 +651,10 @@ public class MainActivity extends Activity {
                     else if (curTouch.y > H / 2) {
                         if (curTouch.x < Obstacle.leftBound && (Obstacle.xPos > Obstacle.leftBound || !obstacle_set)) {
                             if (obstacle_set) {
-                                obstacles[4].switchImage();
+                                obstacles[5].switchImage();
                             }
                             obstacle_set = true;
-                            panel.setActive(obstacle_set && cur_obstacle != 3);
+                            panel.setActive(obstacle_set && cur_obstacle != 4);
                             Obstacle.xPos = Obstacle.leftBound;
                             obstacles[cur_obstacle].move(0);
                             if (cur_demo == 0) {
@@ -659,9 +662,9 @@ public class MainActivity extends Activity {
                             }
                         }
                         else if (curTouch.x > Obstacle.rightBound && (Obstacle.xPos < Obstacle.rightBound || !obstacle_set)) {
-                            obstacles[4].switchImage();
+                            obstacles[5].switchImage();
                             obstacle_set = true;
-                            panel.setActive(obstacle_set && cur_obstacle != 3);
+                            panel.setActive(obstacle_set && cur_obstacle != 4);
                             Obstacle.xPos = Obstacle.rightBound;
                             obstacles[cur_obstacle].move(0);
                             if (cur_demo == 0) {
@@ -708,7 +711,7 @@ public class MainActivity extends Activity {
                                 panel = new panel4(W, H, getResources(), false);
                         }
                         panel.panel.xPos = tmpPos - panel.panel.pos.x;
-                        panel.setActive(obstacle_set && cur_obstacle != 3);
+                        panel.setActive(obstacle_set && cur_obstacle != 4);
                         invert.setActive(panel.reversible);
                     }
                     panel.setMoveFlag(true);
