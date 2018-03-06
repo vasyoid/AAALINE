@@ -23,7 +23,7 @@ public class InfoActivity extends AppCompatActivity implements GestureDetector.O
     private GestureDetectorCompat mDetector;
     private int sysType;
     private View[] layouts;
-    private int[] titles = {R.string.info_title_216, R.string.info_title_218, R.string.info_title_277};
+    private int[] titles = {R.string.info_title_216, R.string.info_title_218, R.string.info_title_277, R.string.info_title_227};
     private boolean isTutorial = false;
 
 
@@ -39,7 +39,8 @@ public class InfoActivity extends AppCompatActivity implements GestureDetector.O
         layouts = new View[] {
                 findViewById(R.id.inc_216),
                 findViewById(R.id.inc_218),
-                findViewById(R.id.inc_277)
+                findViewById(R.id.inc_277),
+                findViewById(R.id.inc_227)
         };
         for (View l : layouts) {
             l.setAlpha(0);
@@ -85,6 +86,7 @@ public class InfoActivity extends AppCompatActivity implements GestureDetector.O
         (findViewById(R.id.site_image_1)).setOnClickListener(link);
         (findViewById(R.id.site_image_2)).setOnClickListener(link);
         (findViewById(R.id.site_image_3)).setOnClickListener(link);
+        (findViewById(R.id.site_image_4)).setOnClickListener(link);
 
         android.widget.Button more = (android.widget.Button) findViewById(R.id.more_button);
         more.setOnClickListener(new View.OnClickListener() {
@@ -101,8 +103,10 @@ public class InfoActivity extends AppCompatActivity implements GestureDetector.O
                         ((TextView) findViewById(R.id.text_216)).setText(getString(R.string.full_216));
                     } else if (sysType == 1) {
                         ((TextView) findViewById(R.id.text_218)).setText(getString(R.string.full_218));
-                    } else {
+                    } else if (sysType == 2) {
                         ((TextView) findViewById(R.id.text_277)).setText(getString(R.string.full_277));
+                    } else {
+                        ((TextView) findViewById(R.id.text_227)).setText(getString(R.string.full_227));
                     }
                 }
                 else {
@@ -111,8 +115,10 @@ public class InfoActivity extends AppCompatActivity implements GestureDetector.O
                         ((TextView) findViewById(R.id.text_216)).setText(getString(R.string.short_216));
                     } else if (sysType == 1) {
                         ((TextView) findViewById(R.id.text_218)).setText(getString(R.string.short_218));
-                    } else {
+                    } else if (sysType == 2){
                         ((TextView) findViewById(R.id.text_277)).setText(getString(R.string.short_277));
+                    } else {
+                        ((TextView) findViewById(R.id.text_227)).setText(getString(R.string.short_227));
                     }
                 }
             }
@@ -203,7 +209,7 @@ public class InfoActivity extends AppCompatActivity implements GestureDetector.O
                 curLayout.setX(0);
             }
         });
-        sysType = (sysType + (distX > 300 ? 2 : 1)) % 3;
+        sysType = (sysType + (distX > 300 ? (layouts.length - 1) : 1)) % layouts.length;
         setTitle(titles[sysType]);
         final View nextLayout = layouts[sysType];
         nextLayout.animate().alpha(1);
