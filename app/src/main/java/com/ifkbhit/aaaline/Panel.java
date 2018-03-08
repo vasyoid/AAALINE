@@ -7,6 +7,7 @@ import android.graphics.Canvas;
 
 abstract public class Panel {
 
+    protected boolean initialized = false;
     boolean showSmall = false;
     boolean isActive = false;
     double w, h;
@@ -110,6 +111,9 @@ abstract public class Panel {
     Bitmap getBitmap(int id) {
         return BitmapFactory.decodeResource(res, id);
     }
+    Bitmap getBitmap(int id, BitmapFactory.Options options) {
+        return BitmapFactory.decodeResource(res, id, options);
+    }
 
     abstract int getLevel(double val);
 
@@ -141,6 +145,11 @@ abstract public class Panel {
 
     void draw(Canvas canvas) { }
     void drawNext(Canvas canvas) {
+        synchronized (this) {
+            if (!initialized) {
+                return;
+            }
+        }
         l_panel.xPos = panel.xPos;
         l_panel.draw(canvas);
         r_panel.xPos = panel.xPos;
